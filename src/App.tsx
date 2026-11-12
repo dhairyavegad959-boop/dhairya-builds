@@ -14,6 +14,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ProjectDetailModal } from './components/ProjectDetailModal';
 import { PortfolioProject, ProjectCategory } from './data/portfolioData';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<'All' | ProjectCategory>('All');
@@ -49,6 +50,7 @@ export default function App() {
         project={activeProject}
         onClose={() => setActiveProject(null)}
       />
+      <Analytics />
     </div>
   );
 }
