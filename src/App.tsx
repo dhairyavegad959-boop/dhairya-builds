@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SelectedWork } from './components/SelectedWork';
@@ -49,6 +50,8 @@ export default function App() {
         project={activeProject}
         onClose={() => setActiveProject(null)}
       />
+
+      <Analytics />
     </div>
   );
 }
